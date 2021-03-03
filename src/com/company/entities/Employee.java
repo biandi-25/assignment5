@@ -7,15 +7,21 @@ public class Employee {
     private String status;
     private String hobby;
     private String level;
-    private String dream;
-}
-    Employee(int id, String name, String surname, String status, String level, String dream, String hobby){
+
+   public Employee(String name, String surname, String status, String level, String hobby){
+        setName(name);
+        setSurname(surname);
+        setStatus(status);
+        setLevel(level);
+        setHobby(hobby);
+    }
+
+    public Employee(int id, String name, String surname, String status, String level, String hobby){
         setId(id);
         setName(name);
         setSurname(surname);
         setStatus(status);
         setLevel(level);
-        setDream(dream);
         setHobby(hobby);
     }
     public int getId() {        return id;
@@ -27,18 +33,15 @@ public class Employee {
     }    public String getStatus() {        return status;
     }    public void setStatus(String status) {        this.status = status;
     }    public String getLevel() {        return level;
-    }    public String getDream() {        return dream;
-    }    public void setDream(String dream) {        this.dream = dream;
     }    public String getHobby() {        return hobby;
     }    public void setHobby(String hobby) {        this.hobby = hobby;
     }    public void setLevel(String level) {        this.level = level;
 
 
         System.out.println("Employee "+ getName()+ getSurname() + " with id "+getId());
-        System.out.println("Level: " +getLevel());9
+        System.out.println("Level: " +getLevel());
         System.out.println("Status: " +getStatus());
-        System.out.println("Dream: " +getDream());
         System.out.println("Hobby: " +getHobby());
     }
     }
-}
+
